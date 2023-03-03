@@ -11,8 +11,16 @@ In this article, you will see what an exception is and how it differs from a syn
 ## Exceptions versus Syntax Errors
 
 Exceptions are errors that occur during the execution of a program. They are usually caused by incorrect input or code that does not conform to the syntax of the language. Examples of exceptions include: ZeroDivisionError, ValueError, TypeError, NameError, etc.
+>print( 0 / 0 )
+
+![The execption!](/img/2023-03-0312.53.47.png "Expetioncs")
 
 Syntax errors occur when the code does not conform to the syntax of the language. These errors can be caused by typos, incorrect indentation, missing parentheses, etc. Examples of syntax errors include: SyntaxError, IndentationError, TabError, etc.
+
+>print( 0 / 0 ))
+
+![The Errors!](/img/2023-03-0313.06.27.png "Errors")
+
 
 
 
