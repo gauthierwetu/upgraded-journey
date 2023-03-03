@@ -84,12 +84,45 @@ The finally clause is executed if no exception occurs in the try clause. If an e
 
 ![Handling execption!](/img/try_except_else_finally.png "TryExeption")
 
+> try:
+>
+>       linux_interaction()
+>
+> except AssertionError as error:
+>
+>       print(error)
+>
+> else:
+>
+>       try:
+>
+>           with open('file.log') as file:
+>
+>            read_data = file.read()
+>
+>       except FileNotFoundError as fnf_error:
+>
+>              print(fnf_error)
+>
+>finally:
+>
+>       print('Cleaning up, irrespective of any exceptions.')
 
+# What we learned
 
+After seeing the difference between syntax errors and exceptions, you learned about various ways to raise, catch, and handle exceptions in Python. In this article, you saw the following options:
 
-une présentation du concept
-– théorie
-– exemple pratique
-– potentielles alternatives
-– des cas d’utilisation concrets en rapport avec l’analyse de données
-– une conclusion et enfin la liste des ressources consultées
+* raise allows you to throw an exception at any time.
+* assert enables you to verify if a certain condition is met and throw an exception if it isn’t.
+* In the try clause, all statements are executed until an exception is encountered.
+* except is used to catch and handle the exception(s) that are encountered in the try clause.
+* else lets you code sections that should run only when no exceptions are encountered in the try clause.
+* finally enables you to execute sections of code that should always run, with or without any previously encountered exceptions.
+
+# Bibliography
+
+* https://realpython.com/python-exceptions/
+* https://www.tutorialspoint.com/python/python_exceptions.htm
+* https://gayerie.dev/docs/python/python3/exception.html
+* https://www.programiz.com/python-programming/exception-handling
+* https://docs.python.org/3/tutorial/errors.html
