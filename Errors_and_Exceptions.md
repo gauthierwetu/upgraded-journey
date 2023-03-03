@@ -46,11 +46,16 @@ The program stops running and presents our exception on the screen, giving hints
 
 # 3. Handling Exceptions
 
-In Python, the try and except block is used to identify and handle any errors that may occur. The code that follows the try statement will be executed as part of the program's normal flow. If an exception occurs, the code that follows the except statement will be executed, allowing the program to respond to the exception.
+## a. The try Statement
+
+The try statement is used to try to execute a block of code. If an exception occurs, the try clause is executed, and the except clauses are not executed.
+
+If an exception occurs, the code that follows the except statement will be executed, allowing the program to respond to the exception.
 
 ![Handling execption!](/img/try_except.png "TryExeption")
 
 This example demonstrates how a program can be written to handle certain exceptions; it will ask the user for input until a valid integer is entered, but will allow the user to interrupt the program (using Control-C or whatever the operating system supports). If the user chooses to interrupt the program, it will be signalled by raising a KeyboardInterrupt exception.
+
 >number = input("write a number : ")
 >
 > try:
@@ -60,6 +65,25 @@ This example demonstrates how a program can be written to handle certain excepti
 > except ValueError:
 >
 >       print("Sorry the entered value is not a number.")
+
+A try statement can include multiple except clauses, each of which specifies a handler for different exceptions. However, only one handler will be executed if an exception occurs. Furthermore, the handlers will only handle exceptions that occur in the same try clause, not in other handlers of the same try statement. Additionally, an except clause can name multiple exceptions as a parenthesized tuple, e.g. (Exception1, Exception2).
+
+>except (RuntimeError, TypeError, NameError):
+>
+>       pass
+
+## b. The else Clause
+
+The else clause is executed if no exception occurs in the try clause. If an exception occurs in the try clause, the else clause is not executed.
+
+![Handling execption!](/img/try_except_else.webp "TryExeptionelse")
+
+## c. The finally Clause
+
+The finally clause is executed if no exception occurs in the try clause. If an exception occurs in the try clause, the finally clause is not executed.
+
+![Handling execption!](/img/try_except_else_finally.png "TryExeption")
+
 
 
 
