@@ -21,9 +21,25 @@ Syntax errors occur when the code does not conform to the syntax of the language
 
 ![The Errors!](/img/2023-03-0313.06.27.png "Errors")
 
+# Raising an Exception
 
+If a condition occurs, we can use raise to throw an exception and supplement it with a custom exception.
 
+![Raise the Errors!](/img/raise.webp "Raise")
 
+If you wish to generate an error when a specific condition is met, you can use the 'raise' command to do so, for example:
+> x = 27
+>
+> if x > 19:
+> raise Exception('x should not exceed 19. The value of x was: {}'.format(x))
+
+During the execution, the output will be the following:
+> Traceback (most recent call last):
+  File "/Users/mac/Documents/DIT OFFLINE/exampython/upgraded-journey/samples.py", line 4, in <module>
+    raise Exception('x should not exceed 19. The value of x was: {}'.format(x))
+Exception: x should not exceed 19. The value of x was: 27
+
+The program stops running and presents our exception on the screen, giving hints about what caused the issue.
 
 
 
