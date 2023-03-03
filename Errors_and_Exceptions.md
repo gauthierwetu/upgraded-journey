@@ -1,14 +1,17 @@
-# Introduction
+![DIT Logo!](/img/Logo.png "DIT")
+# **Python Exam: Errors and Exceptions**
+
+# 1. Introduction
 
 All errors that occur during the execution of a Python program are represented by an **exception**.
 
-## What is an exception?
+## a. What is an exception?
 
 An exception is an object that contains information about the context of the error. When an exception occurs and is not handled, it produces an interrupt in the program and displays a message and the stacktrace on the standard output. The call stack shows the list of functions and methods that were being called at the time of the exception.
 
 In this article, you will see what an exception is and how it differs from a syntax error. After that, you will learn about raising exceptions and making assertions.
 
-## Exceptions versus Syntax Errors
+## b. Exceptions versus Syntax Errors
 
 Exceptions are errors that occur during the execution of a program. They are usually caused by incorrect input or code that does not conform to the syntax of the language. Examples of exceptions include: ZeroDivisionError, ValueError, TypeError, NameError, etc.
 >print( 0 / 0 )
@@ -21,7 +24,7 @@ Syntax errors occur when the code does not conform to the syntax of the language
 
 ![The Errors!](/img/2023-03-0313.06.27.png "Errors")
 
-# Raising an Exception
+# 2. Raising an Exception
 
 If a condition occurs, we can use raise to throw an exception and supplement it with a custom exception.
 
@@ -41,7 +44,22 @@ Exception: x should not exceed 19. The value of x was: 27
 
 The program stops running and presents our exception on the screen, giving hints about what caused the issue.
 
+# 3. Handling Exceptions
 
+In Python, the try and except block is used to identify and handle any errors that may occur. The code that follows the try statement will be executed as part of the program's normal flow. If an exception occurs, the code that follows the except statement will be executed, allowing the program to respond to the exception.
+
+![Handling execption!](/img/try_except.png "TryExeption")
+
+This example demonstrates how a program can be written to handle certain exceptions; it will ask the user for input until a valid integer is entered, but will allow the user to interrupt the program (using Control-C or whatever the operating system supports). If the user chooses to interrupt the program, it will be signalled by raising a KeyboardInterrupt exception.
+>number = input("write a number : ")
+>
+> try:
+>
+>       number = int(number)
+>
+> except ValueError:
+>
+>       print("Sorry the entered value is not a number.")
 
 
 
